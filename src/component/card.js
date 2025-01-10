@@ -1,15 +1,12 @@
 import "./card.css"
 export default function Card({ cardData }) {
+  const{name,flag} = cardData;
   return (
     <>
-      {cardData.map((country,index) => {
-        return (
-          <div key={index} className="card">
-            <img className="card-img" src={country.flag} alt={country.name}/>
-            <p>{country.name}</p>
+          <div className="card">
+            <img className="card-img" src={flag} alt={name}/>
+            <p>{name}</p>
           </div>
-        );
-      })}
     </>
   );
 }

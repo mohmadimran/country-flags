@@ -23,7 +23,9 @@ export default function Hero() {
     <div>
       <div className="card-section">
         <div className="card-container">
-          <Card cardData={countries} />
+          {countries.map((country, index) => (
+            <Card cardData={country} key={index} />
+          ))}
         </div>
       </div>
     </div>
